@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Outfit", sans-serif;
+  display: flex;
+
+  justify-content: center;
+  /* background: linear-gradient(
+    180deg,
+    rgba(217, 217, 217, 0) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  ); */
+}
+
+.main {
+  margin: 72px 72px;
+  position: relative;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr auto auto; */
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: auto 1fr; */
+  grid-template-rows: repeat(2, 1fr);
+  background-color: #f3f4f6;
+  border-radius: 1rem;
+}
+.bi {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / span 2;
+  padding: 2rem;
+  row-gap: 12px;
+  width: 100%;
+  z-index: 1;
+}
+.sh {
+  color: #263fa9;
+}
+.info h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.info p {
+  color: #394150;
+  font-weight: 500;
+  max-width: 90%;
+  line-height: 1.5;
+}
+.card {
+  height: 288px;
+  width: 284px;
+  padding: 24px;
+  display: flex;
+  align-items: end;
+  /* Linear Background */
+
+  width: 100%;
+  height: 100%;
+}
+.des {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  color: #fffefe;
+}
+
+.des p {
+  font-weight: 400;
+}
+.des h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+#c1 {
+  background: linear-gradient(
+      180deg,
+      rgba(254, 252, 252, 0) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url("./person_1@2x.png");
+  background-color: #c1b6f8;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#c2 {
+  background: linear-gradient(
+      180deg,
+      rgba(254, 252, 252, 0) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url("./person_2@2x.png");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #edacd2;
+  border-top-right-radius: 1rem;
+}
+#c3 {
+  background: unset;
+  background-color: #f3f4f6;
+  border-bottom-left-radius: 1rem;
+}
+#c3 a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+#c4 {
+  background: linear-gradient(
+      180deg,
+      rgba(254, 252, 252, 0) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url("./person_3@2x.png");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #9dc4f8;
+}
+#c5 {
+  background: linear-gradient(
+      180deg,
+      rgba(254, 252, 252, 0) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url("./person_4@2x.png");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #f8d8b0;
+}
+#c6 {
+  background: linear-gradient(
+      180deg,
+      rgba(254, 252, 252, 0) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url("./person_5@2x.png");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #86e7d4;
+  border-bottom-right-radius: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  body{
+    height: 100%;
+  }
+  .main {
+    margin: 72px 72px;
+    position: relative;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #f3f4f6;
+    border-radius: 1rem;
+  }
+  .info{
+    grid-column: 1/span 3;
+  }
+  .card{
+    z-index: 1;
+    width: 284px;
+    height: 288px;
+    width: 100%;
+  }
+  #c2{
+    border-top-right-radius:unset ;
+  }
+  #c3{
+    grid-row: 3/span 1;
+    grid-column: 1/span 1;
+  }
+  #c4{
+    grid-row: 2/span 1;
+    grid-column: 3/span 1;
+  }
+  .info p{
+    max-width: 450px;
+  }
+}
+
+@media only screen and (max-width: 640px){
+  .main{
+    margin: 2rem 1rem;
+    grid-template-columns: unset;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7,1fr);
+    border-radius: 2rem;
+  }
+  .card{
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    
+  }
+  .info{
+    grid-row: 1/span 1;
+    grid-column: 1/span 1;
+  }
+  #c1{
+     grid-row: 2/span 1;
+     grid-column: 1/span 1;
+  }
+  #c2{
+     grid-row: 3/span 1;
+     grid-column: 1/span 1;
+  }
+  #c3{
+     grid-row: 7/span 1;
+     grid-column: 1/span 1;
+  }
+  #c4{
+     grid-row: 4/span 1;
+     grid-column: 1/span 1;
+  }
+  #c5{
+     grid-row: 5/span 1;
+     grid-column: 1/span 1;
+  }
+  #c6{
+     grid-row: 6/span 1;
+     grid-column: 1/span 1;
+  }
+}
