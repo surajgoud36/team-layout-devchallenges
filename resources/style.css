@@ -5,7 +5,7 @@
 }
 
 body {
-  height: 100vh;
+  /* height: 100vh; */
   font-family: "Outfit", sans-serif;
   display: flex;
 
@@ -22,9 +22,9 @@ body {
   position: relative;
   display: grid;
   /* grid-template-columns: 1fr 1fr auto auto; */
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 284px);
   /* grid-template-rows: auto 1fr; */
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 288px);
   background-color: #f3f4f6;
   border-radius: 1rem;
 }
@@ -63,8 +63,8 @@ body {
   align-items: end;
   /* Linear Background */
 
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
 }
 .des {
   display: flex;
@@ -166,9 +166,9 @@ body {
     position: relative;
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 284px);
 
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 288px);
     background-color: #f3f4f6;
     border-radius: 1rem;
   }
@@ -201,19 +201,23 @@ body {
   .main{
     margin: 2rem 1rem;
     grid-template-columns: unset;
+    grid-template-rows: unset;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(7,1fr);
+    grid-auto-rows: auto;
     border-radius: 2rem;
+
   }
   .card{
-    height: auto;
-    width: auto;
-    max-width: 100%;
+   width: 100%;
+   min-height: 288px;
     
   }
   .info{
     grid-row: 1/span 1;
     grid-column: 1/span 1;
+  }
+  .info p{
+    max-width: 300px;
   }
   #c1{
      grid-row: 2/span 1;
